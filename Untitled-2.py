@@ -196,12 +196,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<h1 class="main-title">📐 KALKULATOR BANGUN DATAR</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title"> KALKULATOR BANGUN DATAR</h1>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">Hitung Luas & Keliling 7 Jenis Bangun Datar</p>', unsafe_allow_html=True)
 
 # Sidebar untuk info
 with st.sidebar:
-    st.header("ℹ️ Tentang Aplikasi")
+    st.header("Tentang Aplikasi")
     st.info("""
     **Fitur Utama:**
     - Hitung luas 7 bangun datar
@@ -221,7 +221,7 @@ with st.sidebar:
     """)
     
     st.divider()
-    st.caption("Dibuat dengan ❤️ menggunakan Streamlit")
+    st.caption("Dibuat dengan menggunakan Streamlit")
 
 # Pilih operasi perhitungan
 col1, col2 = st.columns([3, 1])
@@ -239,10 +239,10 @@ with col2:
 # Ambil rumus sesuai pilihan
 if opt == "Hitung Luas":
     all_rumus = hitungLuas
-    st.success("📏 **Mode: Menghitung Luas**")
+    st.success("**Mode: Menghitung Luas**")
 else:
     all_rumus = hitungKeliling
-    st.success("📐 **Mode: Menghitung Keliling**")
+    st.success("**Mode: Menghitung Keliling**")
 
 # Pilih jenis bangun
 jenis_bangun = st.radio(
@@ -262,7 +262,7 @@ with st.container():
     """, unsafe_allow_html=True)
 
 # Buat input fields
-st.subheader("📥 **MASUKKAN NILAI**")
+st.subheader("**MASUKKAN NILAI**")
 input_labels = all_rumus[jenis_bangun]["Inputan"]
 inputs = []
 
@@ -282,7 +282,7 @@ for idx, label in enumerate(input_labels):
 # Tombol hitung
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    hitung = st.button("🚀 **HITUNG SEKARANG**", use_container_width=True)
+    hitung = st.button("**HITUNG SEKARANG**", use_container_width=True)
 
 # Proses perhitungan
 if hitung:
@@ -319,7 +319,7 @@ if hitung:
             st.progress(min(100, int(hasil % 100)))
             st.caption(f"Nilai hasil: {hasil:.2f}")
     else:
-        st.error("❌ **ERROR:** Semua nilai harus lebih besar dari 0!")
+        st.error("**ERROR:** Semua nilai harus lebih besar dari 0!")
         st.warning("Pastikan semua input bernilai positif untuk menghitung.")
 
 # Footer
@@ -330,3 +330,4 @@ st.markdown("""
     <p style='font-size: 0.9em;'>Untuk pembelajaran matematika dasar • © 2024</p>
 </div>
 """, unsafe_allow_html=True)
+
